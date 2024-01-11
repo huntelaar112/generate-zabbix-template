@@ -1,0 +1,108 @@
+zabbix_export:
+  version: '6.0'
+  date: '2023-12-07T10:25:32Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: ea0189e431534ba5b4e93926acbfe82b
+      template: 'Endpoint PRODVN2-2GPU'
+      name: 'Endpoint PRODVN2-2GPU'
+      description: |
+
+      groups:
+        -
+          name: Templates
+      items:
+
+        -
+          uuid: e091deff663a408aae629e4cbc2d3933
+          name: 'Endpoint id'
+          key: endpoint.id
+          delay: '5'
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Endpoint
+          triggers:
+            -
+              uuid: 37985f7102f045ea9cf4f7b5ab6b98fe
+              expression: 'last(/Endpoint PRODVN2-2GPU/endpoint.id)="down"'
+              name: 'Endpoint id PRODVN2-2GPU is Down'
+              priority: AVERAGE
+
+        -
+          uuid: b37fcdca8a624979b69fdac6465369b6
+          name: 'Endpoint vnhff'
+          key: endpoint.vnhff
+          delay: '5'
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Endpoint
+          triggers:
+            -
+              uuid: c3768dd0e1a44dd1b0ff07c796d02208
+              expression: 'last(/Endpoint PRODVN2-2GPU/endpoint.vnhff)="down"'
+              name: 'Endpoint vnhff PRODVN2-2GPU is Down'
+              priority: AVERAGE
+
+        -
+          uuid: ca53a95ba82b4def8fd15efe6497ea2d
+          name: 'Endpoint vnhff1'
+          key: endpoint.vnhff1
+          delay: '5'
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Endpoint
+          triggers:
+            -
+              uuid: be9c0688cf674fa58a06cf5a3d59c681
+              expression: 'last(/Endpoint PRODVN2-2GPU/endpoint.vnhff1)="down"'
+              name: 'Endpoint vnhff1 PRODVN2-2GPU is Down'
+              priority: AVERAGE
+
+        -
+          uuid: d1008ce6f938483fa1d442e3b79ba2bc
+          name: 'Endpoint ghvn'
+          key: endpoint.ghvn
+          delay: '5'
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Endpoint
+          triggers:
+            -
+              uuid: dd41ac8ba7544dc1a628a85130dc1aa6
+              expression: 'last(/Endpoint PRODVN2-2GPU/endpoint.ghvn)="down"'
+              name: 'Endpoint ghvn PRODVN2-2GPU is Down'
+              priority: AVERAGE
+
+        -
+          uuid: 34b040c76b1841b495bab853cf7b8563
+          name: 'Endpoint vnpff'
+          key: endpoint.vnpff
+          delay: '5'
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Endpoint
+          triggers:
+            -
+              uuid: a633038253c1445a8eb23aec3e72f208
+              expression: 'last(/Endpoint PRODVN2-2GPU/endpoint.vnpff)="down"'
+              name: 'Endpoint vnpff PRODVN2-2GPU is Down'
+              priority: AVERAGE

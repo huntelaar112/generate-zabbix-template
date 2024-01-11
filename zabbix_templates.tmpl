@@ -1,0 +1,37 @@
+zabbix_export:
+  version: '6.0'
+  date: '2023-12-07T10:25:32Z'
+  groups:
+    -
+      uuid: {{ .GroupTemplateUuid }}
+      name: Templates
+  templates:
+    -
+      uuid: {{ idv4gen }}
+      template: 'Endpoint {{ .TemplateName }}'
+      name: 'Endpoint {{ .TemplateName }}'
+      description: |
+
+      groups:
+        -
+          name: Templates
+      items:
+{{ range .Endpoints }}
+        -
+          uuid: {{ idv4gen }}
+          name: 'Endpoint {{ .EndpointName }}'
+          key: endpoint.{{ .EndpointName }}
+          delay: '5'
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Endpoint
+          triggers:
+            -
+              uuid: {{ idv4gen }}
+              expression: 'last(/Endpoint {{ .TemplateName }}/endpoint.{{ .EndpointName }})="down"'
+              name: 'Endpoint {{ .EndpointName }} {{ .TemplateName }} is Down'
+              priority: AVERAGE
+{{ end }}
