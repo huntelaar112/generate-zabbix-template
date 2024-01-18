@@ -19,29 +19,68 @@ type Enpoint struct {
 	EndpointName string
 }
 
+var (
+	ProdName = "PROD"
+)
+
 func main() {
-	zb_template := Template{
+	/* 	zb_template_prod2 := Template{
+	   		GroupTemplateUuid: "7df96b18c230490a9a0a9e2307226338",
+	   		TemplateName:      "PRODVN2-2GPU",
+	   		Endpoints: []Enpoint{
+	   			{
+	   				TemplateName: "PRODVN2-2GPU",
+	   				EndpointName: "id",
+	   			},
+	   			{
+	   				TemplateName: "PRODVN2-2GPU",
+	   				EndpointName: "vnhff",
+	   			},
+	   			{
+	   				TemplateName: "PRODVN2-2GPU",
+	   				EndpointName: "vnhff1",
+	   			},
+	   			{
+	   				TemplateName: "PRODVN2-2GPU",
+	   				EndpointName: "ghvn",
+	   			},
+	   			{
+	   				TemplateName: "PRODVN2-2GPU",
+	   				EndpointName: "vnpff",
+	   			},
+	   		},
+	   	}
+	*/
+	zb_template_prod1 := Template{
 		GroupTemplateUuid: "7df96b18c230490a9a0a9e2307226338",
-		TemplateName:      "PRODVN2-2GPU",
+		TemplateName:      ProdName,
 		Endpoints: []Enpoint{
 			{
-				TemplateName: "PRODVN2-2GPU",
+				TemplateName: ProdName,
 				EndpointName: "id",
 			},
 			{
-				TemplateName: "PRODVN2-2GPU",
+				TemplateName: ProdName,
+				EndpointName: "id1",
+			},
+			{
+				TemplateName: ProdName,
 				EndpointName: "vnhff",
 			},
 			{
-				TemplateName: "PRODVN2-2GPU",
-				EndpointName: "vnhff1",
+				TemplateName: ProdName,
+				EndpointName: "face",
 			},
 			{
-				TemplateName: "PRODVN2-2GPU",
-				EndpointName: "ghvn",
+				TemplateName: ProdName,
+				EndpointName: "cmndqd",
 			},
 			{
-				TemplateName: "PRODVN2-2GPU",
+				TemplateName: ProdName,
+				EndpointName: "pp",
+			},
+			{
+				TemplateName: ProdName,
 				EndpointName: "vnpff",
 			},
 		},
@@ -59,7 +98,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	err = tmpl.Execute(f, zb_template)
+	err = tmpl.Execute(f, zb_template_prod1)
 	if err != nil {
 		panic(err)
 	}

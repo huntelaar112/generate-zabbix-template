@@ -7,9 +7,9 @@ zabbix_export:
       name: Templates
   templates:
     -
-      uuid: ea0189e431534ba5b4e93926acbfe82b
-      template: 'Endpoint PRODVN2-2GPU'
-      name: 'Endpoint PRODVN2-2GPU'
+      uuid: c0ca6b98a4ff4532a70454f4848dbfbd
+      template: 'Endpoint PROD'
+      name: 'Endpoint PROD'
       description: |
 
       groups:
@@ -18,7 +18,7 @@ zabbix_export:
       items:
 
         -
-          uuid: e091deff663a408aae629e4cbc2d3933
+          uuid: 9a567e06c76743d2b3479274f84f2b60
           name: 'Endpoint id'
           key: endpoint.id
           delay: '5'
@@ -30,13 +30,31 @@ zabbix_export:
               value: Endpoint
           triggers:
             -
-              uuid: 37985f7102f045ea9cf4f7b5ab6b98fe
-              expression: 'last(/Endpoint PRODVN2-2GPU/endpoint.id)="down"'
-              name: 'Endpoint id PRODVN2-2GPU is Down'
+              uuid: 5c5c1de3112944d895f7031012567bb3
+              expression: 'last(/Endpoint PROD/endpoint.id)="down"'
+              name: 'Endpoint id PROD is Down'
               priority: AVERAGE
 
         -
-          uuid: b37fcdca8a624979b69fdac6465369b6
+          uuid: 7e85e39845b74ec7b9f8fed29039bf14
+          name: 'Endpoint id1'
+          key: endpoint.id1
+          delay: '5'
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Endpoint
+          triggers:
+            -
+              uuid: 6abc4d5120c14c6986c14d9d152f11cb
+              expression: 'last(/Endpoint PROD/endpoint.id1)="down"'
+              name: 'Endpoint id1 PROD is Down'
+              priority: AVERAGE
+
+        -
+          uuid: ae4f64f2de374a1588753b1db7968c07
           name: 'Endpoint vnhff'
           key: endpoint.vnhff
           delay: '5'
@@ -48,15 +66,15 @@ zabbix_export:
               value: Endpoint
           triggers:
             -
-              uuid: c3768dd0e1a44dd1b0ff07c796d02208
-              expression: 'last(/Endpoint PRODVN2-2GPU/endpoint.vnhff)="down"'
-              name: 'Endpoint vnhff PRODVN2-2GPU is Down'
+              uuid: 62728991b41f42baa47ed6620357d1a4
+              expression: 'last(/Endpoint PROD/endpoint.vnhff)="down"'
+              name: 'Endpoint vnhff PROD is Down'
               priority: AVERAGE
 
         -
-          uuid: ca53a95ba82b4def8fd15efe6497ea2d
-          name: 'Endpoint vnhff1'
-          key: endpoint.vnhff1
+          uuid: 993cb93106b34c46954a45986555a12f
+          name: 'Endpoint face'
+          key: endpoint.face
           delay: '5'
           trends: '0'
           value_type: TEXT
@@ -66,15 +84,15 @@ zabbix_export:
               value: Endpoint
           triggers:
             -
-              uuid: be9c0688cf674fa58a06cf5a3d59c681
-              expression: 'last(/Endpoint PRODVN2-2GPU/endpoint.vnhff1)="down"'
-              name: 'Endpoint vnhff1 PRODVN2-2GPU is Down'
+              uuid: cd31434fb7a74ae7915006390d2a398b
+              expression: 'last(/Endpoint PROD/endpoint.face)="down"'
+              name: 'Endpoint face PROD is Down'
               priority: AVERAGE
 
         -
-          uuid: d1008ce6f938483fa1d442e3b79ba2bc
-          name: 'Endpoint ghvn'
-          key: endpoint.ghvn
+          uuid: 96e56f1275d245349cc3c12f0c4481eb
+          name: 'Endpoint cmndqd'
+          key: endpoint.cmndqd
           delay: '5'
           trends: '0'
           value_type: TEXT
@@ -84,13 +102,31 @@ zabbix_export:
               value: Endpoint
           triggers:
             -
-              uuid: dd41ac8ba7544dc1a628a85130dc1aa6
-              expression: 'last(/Endpoint PRODVN2-2GPU/endpoint.ghvn)="down"'
-              name: 'Endpoint ghvn PRODVN2-2GPU is Down'
+              uuid: 085dc4c93f5f4f6aa80031c847585fa2
+              expression: 'last(/Endpoint PROD/endpoint.cmndqd)="down"'
+              name: 'Endpoint cmndqd PROD is Down'
               priority: AVERAGE
 
         -
-          uuid: 34b040c76b1841b495bab853cf7b8563
+          uuid: 62101ad8ae9e4041b55078321d232eb2
+          name: 'Endpoint pp'
+          key: endpoint.pp
+          delay: '5'
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Endpoint
+          triggers:
+            -
+              uuid: a14888ece6b542549f9d195a0e3de31d
+              expression: 'last(/Endpoint PROD/endpoint.pp)="down"'
+              name: 'Endpoint pp PROD is Down'
+              priority: AVERAGE
+
+        -
+          uuid: 7f97111031c14f62bb4cf81fb9177891
           name: 'Endpoint vnpff'
           key: endpoint.vnpff
           delay: '5'
@@ -102,7 +138,7 @@ zabbix_export:
               value: Endpoint
           triggers:
             -
-              uuid: a633038253c1445a8eb23aec3e72f208
-              expression: 'last(/Endpoint PRODVN2-2GPU/endpoint.vnpff)="down"'
-              name: 'Endpoint vnpff PRODVN2-2GPU is Down'
+              uuid: 45a743e9f5344e62a42918cf555b3b77
+              expression: 'last(/Endpoint PROD/endpoint.vnpff)="down"'
+              name: 'Endpoint vnpff PROD is Down'
               priority: AVERAGE
